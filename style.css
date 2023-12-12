@@ -1,0 +1,297 @@
+:root {
+    --primaryColor: #2756ff;
+    --secondaryColor: #c3d1ff;
+    --lightColor: #fff;
+    --bgColor-1: #171a1c;
+    --bgColor-2: #222828;
+    --padding: 8%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    color: var(--lightColor);
+    overflow-x: hidden;
+}
+    
+.home {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor-1);
+    display: flex;
+    flex-direction: column;
+}
+
+*::selection{
+    background-color: #88888855;
+}
+
+span {
+    color: var(--primaryColor);
+}
+
+nav h2 {
+    font-size: 2.2rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.5s;
+}
+nav h2:hover{
+    letter-spacing: 0.5rem;
+}
+
+nav {
+    background-color: var(--bgColor-2);
+    padding: 2.2rem var(--padding);
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+    transition: 0.45s;
+}
+nav ul li a {
+    color: var(--lightColor);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.45s;
+}
+nav ul li a:hover {
+    color: var(--primaryColor);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.btn{
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 39% 61% 70% 30% / 46% 70% 30% 54% ;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--primaryColor);
+    box-shadow: 0 0 1rem var(--primaryColor);
+}
+nav .btn{
+    padding: 1.35rem 0.75rem;
+}
+
+.content{
+    flex-grow: 1;
+    padding: 0 var(--padding);
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: var(--secondaryColor);
+}
+h1{
+    font-size: 4rem;
+    margin: 1.7rem 0;
+    letter-spacing: 0.2rem;
+}
+h3{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    display: inline;
+}
+.Socials{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    width: 15rem;
+    justify-content: space-between;
+}
+
+.Socials img{
+    width: 2.5rem;
+    transition: 0.25s;
+}
+.Socials img:hover{
+    transform: scale(1.2);
+}
+
+.Himage{
+    width: 45%;
+    height: 90%;
+    position: relative;
+    align-self: flex-end;
+}
+.Himage img{
+    position: absolute;
+    bottom: -7rem;
+    height: 110%;
+    bottom: 0;
+    transition: 0.5s;
+    user-select: none;
+}
+.Himage .pic{
+    height: 110%;
+    left: 7%;
+}
+.Himage:hover .Shape{
+    transform: rotate(-5deg) translate(0, -5%);
+}
+.Himage:hover .pic{
+    transform: rotate(5deg) translate(5%, -5%);
+}
+
+
+.about{
+    width: 100vw;
+    min-height: 60vh;
+    max-height: 100vh;
+    background-color: var(--bgColor-2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Aimage{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5%;
+}
+.Aimage img{
+    width: 75%;
+    opacity: 0.7;
+    margin: 0;
+}
+.Aimage a{
+    margin: auto;
+    color: gray;
+    text-decoration: none;
+}
+
+.container{
+    width: 50%;
+    padding-right: var(--padding);
+}
+.container p{
+    word-spacing: 0.2rem;
+    line-height: 1.25rem;
+}
+
+
+.services{
+    background-color: var(--bgColor-1);
+    width: 100vw;
+    min-height: 75vh;
+    max-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.services .ServiceContain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    padding-bottom: 2rem;
+}
+.services .ServiceContain div{
+    background-color: var(--bgColor-2);
+    width: 22%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.services .ServiceContain div img{
+    width: 80%;
+    opacity: 0.7;
+}
+.services p{
+    margin: 10% 0;
+    color: var(--secondaryColor);
+    line-height: 1.3rem;
+}
+
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    min-height: 65vh;
+    max-height: 110vh;
+    background-color: var(--bgColor-2);
+}
+.skills .Scontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 50%;
+}
+.skills .Scontainer div{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: first baseline;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skills .Scontainer div img{
+    width: 4rem;
+    border-radius: 50px;
+    padding: 0.25rem;
+    background-color: var(--lightColor);
+    margin: 1rem;
+    transition: 0.5s;
+}
+.skills .Scontainer div img:hover{
+    transform: scale(1.25);
+} 
+.skills .Simage{
+    width: 45%;
+    height: 90%;
+}
+.skills .Simage img{
+    width: 90%;
+    opacity: 0.7;
+}
+
+@media (max-width: 500px) {
+    .content{
+        flex-direction: column;
+    }
+    
+}
